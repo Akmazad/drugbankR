@@ -57,9 +57,10 @@ queryDB(ids = c("DB00001","DB00002"),type = "getTargets", version="5.0.10")
 ```
 
 ## Query specific version of drugbank SQLite database with Drug Name
+```r
 all <- queryDB(type = "getAll", version="5.0.10") # get the entire drugbank dataframe
 names = c("Salbutamol","Levobupivacaine")         # a set of drug names to find their approval information
 subNames = all[all$"name" %in% names,]
 whichFDA = grepl("approved",subNames$groups)
 whichFDA
-
+```
