@@ -26,7 +26,10 @@ library(drugbankR)
 ## Generate your own drugbank SQLite database from specific version of drugbank full database (xml file) downloaded from [here](http://www.drugbank.ca/releases/latest)
 
 ```r
-## download the original drugbank database (http://www.drugbank.ca/releases/latest) (xml file) into your current directory and rename as drugbank.xml 
+## To start with the Database
+## 1. download the original drugbank database (http://www.drugbank.ca/releases/latest) (xml file) 
+## 2. rename that as "drugbank.xml"
+## 3. copy-paste into your current directory
 
 # transform drugbank database (xml file) into dataframe, this may take about 20 minutes. Argument version is the version of downloaded xml file. We currently have version 5.0.10
 drugbank_dataframe <- dbxml2df(xmlfile="drugbank.xml", version="5.0.10") 
